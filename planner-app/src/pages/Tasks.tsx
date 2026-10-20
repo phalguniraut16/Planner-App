@@ -164,13 +164,16 @@ export default function TasksPage() {
             <DialogDescription>Add a task to your list</DialogDescription>
           </DialogHeader>
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-const form = e.currentTarget;
-const title = (new FormData(form).get("title") as string)?.trim() ?? "";
-if (!title) return;
-handleCreate(title);              handleCreate(title);
-            }}
+        onSubmit={(e) => {
+  e.preventDefault();
+
+  const form = e.currentTarget;
+  const title = (new FormData(form).get("title") as string)?.trim() ?? "";
+
+  if (!title) return;
+
+  void handleCreate(title);
+}}
             className="space-y-4 pt-4"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
