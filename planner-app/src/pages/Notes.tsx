@@ -119,4 +119,12 @@ export default function NotesPage() {
     </div>
   );
 }
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, Label } from "@/components/ui/Dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/Dialog";
+
+import { Label } from "@/components/ui/Label";
