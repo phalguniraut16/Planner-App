@@ -166,8 +166,10 @@ export default function TasksPage() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              const title = (e.target as HTMLFormElement("title") as HTMLInputElement).value;
-              handleCreate(title);
+const form = e.currentTarget;
+const title = (new FormData(form).get("title") as string)?.trim() ?? "";
+if (!title) return;
+handleCreate(title);              handleCreate(title);
             }}
             className="space-y-4 pt-4"
           >
